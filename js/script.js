@@ -1,19 +1,13 @@
 $("document").ready(function() {
     getCoords();
 
-  /*$('.twitter-quote').on('click', function() {
-    var quote = $('#quote-text').text();
-    var author = $('#quote-author').text();
-    var tweetLink = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(quote + author);
-    window.open(tweetLink);
-  });*/
-
 });
 
 function changeWeather(json) {
    console.log(json);
    var temp = Math.round(((json.main.temp) - 273.15));
    console.log(temp);
+   $('.temperature').html(temp + ' &degC');
 }
 
 function getCoords() {
